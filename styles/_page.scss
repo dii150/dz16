@@ -1,0 +1,191 @@
+@use "variables";
+
+.header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgba(239, 238, 243, 1);
+
+  &-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+  }
+
+  &-logo-name a {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 35px;
+    color: variables.$accent;
+  }
+}
+
+.main {
+  margin-top: 100px;
+  &__text {
+    color: $secondary;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 15px;
+  }
+
+  &__header {
+    color: $accent;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+  }
+}
+
+.tiles {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &__item {
+    width: 370px;
+    height: 340px;
+    border: 1px solid rgba(229, 234, 244, 1);
+    border-radius: 8px;
+    padding: 40px;
+
+    &_header {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 21px;
+      letter-spacing: 0.2px;
+      color: $accent;
+    }
+
+    &_para {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: $accent;
+      margin-bottom: 30px;
+    }
+
+    &_bottom-text {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $hover;
+    }
+
+
+    &:hover {
+      border-color: $hover;
+      transition: .2s all;
+    }
+
+    &:hover .tiles__item_header {
+      transform: scale(110%) translateX(10px);
+      transition: .2s all;
+    }
+
+    &:hover .tiles__item_bottom-text {
+      text-decoration: underline;
+      transition: .2s all;
+    }
+
+    &:hover svg {
+      filter: hue-rotate(-90deg);
+      transition: .2s all;
+    }
+
+  }
+
+}
+
+.svg-holder {
+  border: 1px solid rgba(229, 234, 244, 1);
+  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  height: 36px;
+  width: 40px;
+}
+
+.tiles__item:last-child .icon {
+  padding-left: 8px;
+}
+
+.footer {
+  width: 100%;
+  height: 193px;
+  background: $accent;
+  padding: 40px 0;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 40px;
+  }
+
+  &-logo-name a {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 35px;
+    color: white;
+  }
+
+  &-media {
+    display: flex;
+    gap: 10px;
+
+    &__item {
+      width: 38px;
+      height: 38px;
+      background: rgba(239, 238, 243, 1);
+      border-radius: 5px;
+    }
+  }
+
+  &-media__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      fill: $hover;
+      transition: 150ms all;
+    }
+
+    &_fb {
+      padding-left: 5px;
+    }
+  }
+
+  &-media__item svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
